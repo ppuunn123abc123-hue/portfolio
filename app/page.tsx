@@ -89,6 +89,8 @@ const certificates = [
 ];
 
 export default function Home() {
+  const revealTransition = { duration: 0.7, ease: 'easeOut' as const };
+
   return (
     <div className="portfolio-shell">
       <nav className="portfolio-nav">
@@ -106,7 +108,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
           className="portfolio-status"
         >
           <span className="portfolio-dot" />
@@ -116,7 +118,7 @@ export default function Home() {
         <motion.p
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="portfolio-tag"
         >
           Computer Science · Data Science · AI · Backend
@@ -164,8 +166,8 @@ export default function Home() {
         <div className="about-grid">
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 28 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={revealTransition}
             viewport={{ once: true }}
             className="about-bio"
           >
@@ -184,8 +186,8 @@ export default function Home() {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 28 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ ...revealTransition, delay: 0.1 }}
             viewport={{ once: true }}
             className="about-stats"
           >
@@ -217,8 +219,8 @@ export default function Home() {
             <motion.article
               key={card.title}
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 28 }}
-              transition={{ duration: 0.55 }}
+              initial={{ opacity: 0, y: 30 }}
+              transition={revealTransition}
               viewport={{ once: true }}
               className="skill-card"
             >
@@ -243,8 +245,8 @@ export default function Home() {
             <motion.article
               key={project.id}
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 28 }}
-              transition={{ duration: 0.55 }}
+              initial={{ opacity: 0, y: 30 }}
+              transition={revealTransition}
               viewport={{ once: true }}
               className="project-row"
             >
@@ -270,8 +272,8 @@ export default function Home() {
             <motion.div
               key={cert}
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.45 }}
+              initial={{ opacity: 0, y: 30 }}
+              transition={revealTransition}
               viewport={{ once: true }}
               className="cert-card"
             >
@@ -290,11 +292,11 @@ export default function Home() {
           Open to internships, collaborations, projects, or a conversation about CS, AI, and backend systems.
         </p>
         <div className="contact-links">
-          <MagneticButton href="mailto:your.email@example.com" className="portfolio-btn portfolio-btn-filled">
-            your.email@example.com
+          <MagneticButton href="mailto:punya0908@gmail.com" className="portfolio-btn portfolio-btn-filled">
+            punya0908@gmail.com
           </MagneticButton>
-          <MagneticButton href="#" className="portfolio-btn">GitHub</MagneticButton>
-          <MagneticButton href="#" className="portfolio-btn">LinkedIn</MagneticButton>
+          <MagneticButton href="https://github.com/ppuunn123abc123-hue" className="portfolio-btn">GitHub</MagneticButton>
+          <MagneticButton href="https://www.linkedin.com/in/punya-mohun/" className="portfolio-btn">LinkedIn</MagneticButton>
         </div>
       </section>
 
